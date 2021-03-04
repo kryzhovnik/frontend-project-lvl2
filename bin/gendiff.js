@@ -1,11 +1,10 @@
 #!/usr/bin/env node
-
-const { program } = require('commander');
+import { gendiff } from '../src/index.js';
+import program from 'commander';
 
 const run = (filepath1, filepath2, options) => {
-  console.log(`The first file: ${filepath1}`);
-  console.log(`The second file: ${filepath2}`);
-  console.log(`Options: ${JSON.stringify(options)}`);
+  const diff = gendiff(filepath1, filepath2, options);
+  console.log(diff);
 };
 
 program.description('Compares two configuration files and shows a difference.')
