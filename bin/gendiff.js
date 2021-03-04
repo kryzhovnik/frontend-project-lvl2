@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { gendiff } from '../src/index.js';
 import program from 'commander';
+import gendiff from '../src/index.js';
 
 const run = (filepath1, filepath2, options) => {
   const diff = gendiff(filepath1, filepath2, options);
