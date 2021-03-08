@@ -10,10 +10,8 @@ const readJSON = (filepath) => {
   return JSON.parse(data);
 };
 
-const gendiff = (filepath1, filepath2) => {
-  const obj1 = readJSON(filepath1);
-  const obj2 = readJSON(filepath2);
 
+const gendiffJSON = (obj1, obj2) => {
   const keys = _.uniq(_.keys(obj1).concat(_.keys(obj2)));
   const sortedKeys = _.sortBy(keys, (e) => e);
 
@@ -36,6 +34,13 @@ const gendiff = (filepath1, filepath2) => {
   });
 
   return `{\n${lines.join('\n')}\n}`;
+};
+
+const gendiff = (filepath1, filepath2, options) => {
+  const obj1 = readJSON(filepath1);
+  const obj2 = readJSON(filepath2);
+
+  return gendiffJSON(obj1, obj2);
 };
 
 export default gendiff;
