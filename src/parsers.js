@@ -8,8 +8,9 @@ const getFormat = (filepath) => {
   switch (extname) {
     case '.json':
       return 'JSON';
-    case '.yaml':
     case '.yml':
+      return 'YAML';
+    case '.yaml':
       return 'YAML';
     default:
       throw new Error(`Unknown format for "${extname}" extension.`);

@@ -23,7 +23,7 @@ test('gendiff makes flat JSON comparison', () => {
 
 test('gendiff makes flat YAML comparison', () => {
   const file1Path = '__fixtures__/file1.yml';
-  const file2Path = '__fixtures__/file2.yml';
+  const file2Path = '__fixtures__/file2.yaml';
 
   const wrongDiffFile = readFixture('wrong-file1-file2.diff');
   const diffFile = readFixture('file1-file2.diff');
