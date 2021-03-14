@@ -5,3 +5,5 @@
 
 ## Look how it works
 JSON: [![asciicast](https://asciinema.org/a/396740.svg)](https://asciinema.org/a/396740)
+
+YAML: [![asciicast](https://asciinema.org/a/399119.svg)](https://asciinema.org/a/399119)
